@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Marry Me, Sardha? 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at bottom, #0b1d3a, #000);
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+      z-index: 10;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff9a9e;
+      margin-bottom: 30px;
+      font-family: 'Pacifico', cursive;
+      animation: bounce 2s infinite;
+    }
+    #loveMessage {
+      font-size: 1.5rem;
+      white-space: pre-wrap;
+      margin-bottom: 40px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+    .slideshow {
+      margin: 40px 0;
+      animation: zoomIn 1.5s ease-in-out;
+    }
+    .slideshow img {
+      width: 300px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+      margin: 0 10px;
+      transition: transform 0.5s;
+    }
+    .slideshow img:hover {
+      transform: scale(1.05);
+    }
+    .proposal {
+      margin-top: 40px;
+    }
+    .yes-button {
+      padding: 15px 30px;
+      font-size: 1.4rem;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+      animation: glow 2s infinite alternate;
+    }
+    .yes-button:hover {
+      transform: scale(1.1);
+      background-color: #e73370;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #ff4081; }
+      to { box-shadow: 0 0 30px #ff4081; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    #countdown {
+      font-size: 1.2rem;
+      margin: 30px 0;
+    }
+    .timeline {
+      text-align: left;
+      margin-top: 50px;
+      animation: fadeIn 3s ease-in-out;
+    }
+    .timeline h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffcccb;
+    }
+    .timeline ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .timeline li {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      border-left: 3px solid #ff4081;
+    }
+    .confetti, .surprise, .fireworks {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      pointer-events: none;
+    }
+    #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      z-index: 10000;
+      display: none;
+    }
+    .audio-button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      animation: fadeIn 2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Cutie,MY Pretty Little Baby,My Doremon,My Babu,Sona,Jaadu Tona ❤️</h1>
+    <div id="loveMessage"></div>
+
+    <div class="slideshow">
+      <img src="b1.jpg" alt="Memory 1">
+      <img src="b2.jpg" alt="Memory 2">
+      <img src="b3.jpg" alt="Memory 3">
+      <img src="b4.jpg" alt="Memory 3">
+
+    </div>
+
+    <button class="audio-button" onclick="playAudio()">Start the Magic ✨</button>
+    <audio id="bgMusic" autoplay loop>
+      <source src="Tera dhyan .mp3" type="audio/mp3">
+    </audio>
+
+    <div class="proposal">
+      <h2>Will you marry me? 💍</h2>
+      <button class="yes-button" onclick="triggerMagic();">YES! 💖</button>
+    </div>
+
+    <div class="timeline">
+      <h2>Feelings For U📜</h2>
+      <ul>
+        <li>🌸 "Aapke muskurahat aisi hai jaise subah ki chai — ek baar mil jaaye, toh poora din accha lagta hai." ☕</li>
+        <li>🌹 "Aap online aate ho toh notifications se zyada dil vibrate karta hai." 💬💓</li>
+        <li>💬 "Dil karta hai Aapko ‘Good Morning’ aur ‘Good Night’ dono personally aa ke bolu… daily." ☀️🌙</li>
+        <li>❤️ "Aapka messages caffeine se zyada kick dete hain." ☕💬</li>
+         <li>🌹 "Aapka naam likhne jaata hoon aur autocorrect bhi dil wale emoji daal deta hai." ❤️📲</li>
+      </ul>
+    </div>
+  </div>
+
+  <canvas class="fireworks" id="fireworks"></canvas>
+  <div class="surprise" id="surprise">
+  </div>
+  <div id="popup">You said YES! 🥹💍 I love you forever, Beta 😘. ❤️</div>
+
+  <script>
+    const message = `You came into my life like a beautiful dream.\nYou’ve made me laugh, cry, and believe in forever again.\nWith you, Babu Kumkum, every moment is a memory, every smile is a treasure.\nSo today, I just have one question... 💖`;
+    let i = 0;
+    function typeWriter() {
+      if (i < message.length) {
+        document.getElementById("loveMessage").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    typeWriter();
+
+    const targetDate = new Date("2025-12-01T00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("countdown").innerText = `Countdown to Forever: ${days} days left 💞`;
+    }, 1000);
+
+    function triggerMagic() {
+      document.getElementById("popup").style.display = "flex";
+      document.getElementById("surprise").style.display = 'block';
+      launchFireworks();
+    }
+
+    function playAudio() {
+      const audio = document.getElementById('bgMusic');
+      audio.play();
+    }
+
+    function launchFireworks() {
+      const canvas = document.getElementById("fireworks");
+      const ctx = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      let particles = [];
+      for (let i = 0; i < 200; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height / 2,
+          dx: (Math.random() - 0.5) * 8,
+          dy: Math.random() * -5 - 2,
+          radius: Math.random() * 3 + 1,
+          color: `hsl(${Math.random() * 360}, 100%, 70%)`
+        });
+      }
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((p, index) => {
+          p.x += p.dx;
+          p.y += p.dy;
+          p.dy += 0.1;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.fill();
+          if (p.y > canvas.height) particles.splice(index, 1);
+        });
+        if (particles.length > 0) requestAnimationFrame(animate);
+      }
+      animate();
+    }
+  </script>
+</body>
+</html>
